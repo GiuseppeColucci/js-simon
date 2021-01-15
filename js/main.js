@@ -14,11 +14,11 @@ function numberRandom(max, min){
 }
 
 //ciclo e stampa dei numeri random
-var numeriDaRicordare=[];
+var numeriDaRicordare;
 
 for(var i=0; i<5; i++){
   var N=numberRandom(1,100);
-  numeriDaRicordare.push(N)      
+  numeriDaRicordare.push(N);      
 }
 
 alert('Hai 30 sec per ricordare questi numeri!!!  '+ '' + numeriDaRicordare  +''+ '  oppure premi il pulsante OK! se ti senti pronto ;-)')
@@ -35,11 +35,15 @@ for(var y=0;y<5; y++){
 var giusti=[];
 var sbagliati=[];
 
-if(numeriDaRicordare===NumUtente){
-    giusti.push(NumUtente)
-}
-else{
-    sbagliati.push(NumUtente)
+for(var z=0; z<5; z++){
 
+    if(numeriDaRicordare.includes(NumUtente)){
+        giusti.push(NumUtente)
+    }
+    else{
+        sbagliati.push(NumUtente)
+    
+    }
 }
+
 alert('i numeri giusti'+ giusti.length + ' e i numeri sbagliati sono '+ sbagliati.length)
