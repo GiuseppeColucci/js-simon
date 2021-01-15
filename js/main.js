@@ -14,7 +14,8 @@ function numberRandom(max, min){
 }
 
 //ciclo e stampa dei numeri random
-var numeriDaRicordare=[]
+var numeriDaRicordare=[];
+
 for(var i=0; i<5; i++){
   var N=numberRandom(1,100);
   numeriDaRicordare.push(N)      
@@ -28,10 +29,12 @@ var NumUtente=[]
 for(var y=0;y<5; y++){
     var utente=parseInt(prompt('inseirisci un numero'))
     NumUtente.push(utente)
+  
 }
 
 var giusti=[];
 var sbagliati=[];
+
 if(numeriDaRicordare===NumUtente){
     giusti.push(NumUtente)
 }
