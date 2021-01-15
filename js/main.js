@@ -20,30 +20,38 @@ for(var i=0; i<5; i++){
   var N=numberRandom(1,100);
   numeriDaRicordare.push(N);      
 }
+alert('Hai 30 sec per ricordare questi numeri!!!  '+ '' + numeriDaRicordare  +''+ ' premi il pulsante OK! se ti senti pronto ;-)')
 
-alert('Hai 30 sec per ricordare questi numeri!!!  '+ '' + numeriDaRicordare  +''+ '  oppure premi il pulsante OK! se ti senti pronto ;-)')
 //tempo per far svanire l'alert!!
 
 
-var NumUtente=[];
-for(var y=0;y<5; y++){
-    var utente=parseInt(prompt('inseirisci un numero'))
-    NumUtente.push(utente)
-  
-}
-
-var giusti=[];
-var sbagliati=[];
-
-for(var z=0; z<5; z++){
-    if(numeriDaRicordare.includes(NumUtente[z])){
-        giusti.push(NumUtente[z]);
+setTimeout(function() {
+    var NumUtente=[];
+    for(var y=0;y<5; y++){
+        var utente=parseInt(prompt('inseirisci un numero'))
+        NumUtente.push(utente)
+      
     }
-    else{
-        sbagliati.push(NumUtente[z]);
-
+    
+    var giusti=[];
+    var sbagliati=[];
+    
+    for(var z=0; z<5; z++){
+        if(numeriDaRicordare.includes(NumUtente[z])){
+            giusti.push(NumUtente[z]);
+        }
+        else{
+            sbagliati.push(NumUtente[z]);
+    
+        }
     }
-}
+    alert('i numeri giusti'+ giusti.length + ' e i numeri sbagliati sono '+ sbagliati.length)
+
+}, 3000);
 
 
-alert('i numeri giusti'+ giusti.length + ' e i numeri sbagliati sono '+ sbagliati.length)
+    
+
+
+
+
