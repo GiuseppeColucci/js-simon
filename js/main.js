@@ -7,7 +7,7 @@
 * Dividete in piccoli problemi la consegna.
 * Individuate gli elementi di cui avete bisogno per realizzae il programma.
  */
-
+var numHtml=document.getElementById('num')
 // funzione random
 function numberRandom(max, min){
     return Math.floor(Math.random()*(max - min + 1) )+min;
@@ -17,11 +17,26 @@ function numberRandom(max, min){
 var numeriDaRicordare=[]
 for(var i=0; i<5; i++){
   var N=numberRandom(1,100);
-  numeriDaRicordare.push(N)  
-    
+  numeriDaRicordare.push(N)      
 }
-alert(numeriDaRicordare)
+
+alert('Hai 30 sec per ricordare questi numeri!!!  '+ '' + numeriDaRicordare  +''+ '  oppure premi il pulsante OK! se ti senti pronto ;-)')
+//tempo per far svanire l'alert!!
 
 
+var NumUtente=[]
+for(var y=0;y<5; y++){
+    var utente=parseInt(prompt('inseirisci un numero'))
+    NumUtente.push(utente)
+}
 
+var giusti=[];
+var sbagliati=[];
+if(numeriDaRicordare===NumUtente){
+    giusti.push(NumUtente)
+}
+else{
+    sbagliati.push(NumUtente)
 
+}
+alert('i numeri giusti'+ giusti.length + ' e i numeri sbagliati sono '+ sbagliati.length)
