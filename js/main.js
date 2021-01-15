@@ -14,7 +14,7 @@ function numberRandom(max, min){
 }
 
 //ciclo e stampa dei numeri random
-var numeriDaRicordare;
+var numeriDaRicordare=[];
 
 for(var i=0; i<5; i++){
   var N=numberRandom(1,100);
@@ -25,7 +25,7 @@ alert('Hai 30 sec per ricordare questi numeri!!!  '+ '' + numeriDaRicordare  +''
 //tempo per far svanire l'alert!!
 
 
-var NumUtente=[]
+var NumUtente=[];
 for(var y=0;y<5; y++){
     var utente=parseInt(prompt('inseirisci un numero'))
     NumUtente.push(utente)
@@ -36,14 +36,14 @@ var giusti=[];
 var sbagliati=[];
 
 for(var z=0; z<5; z++){
-
-    if(numeriDaRicordare.includes(NumUtente)){
-        giusti.push(NumUtente)
+    if(numeriDaRicordare.includes(NumUtente[z])){
+        giusti.push(NumUtente[z]);
     }
     else{
-        sbagliati.push(NumUtente)
-    
+        sbagliati.push(NumUtente[z]);
+
     }
 }
+
 
 alert('i numeri giusti'+ giusti.length + ' e i numeri sbagliati sono '+ sbagliati.length)
